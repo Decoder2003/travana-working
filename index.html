@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +48,8 @@
             margin-bottom: 50px;
         }
 
-        .user-side, .system-side {
+        .user-side,
+        .system-side {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -272,11 +274,11 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .connection-line {
                 display: none;
             }
-            
+
             .technical-layers {
                 grid-template-columns: 1fr;
             }
@@ -286,13 +288,15 @@
             .title {
                 font-size: 2em;
             }
-            
-            .user-side, .system-side {
+
+            .user-side,
+            .system-side {
                 padding: 20px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">🚗 Travana Ride Booking Process</h1>
@@ -301,14 +305,14 @@
         <!-- Phase 1: Discovery & Matching -->
         <div class="phase">
             <h2 class="phase-title">🔍 Phase 1: Privacy-First Discovery & AI Matching</h2>
-            
+
             <div class="flow-diagram">
                 <div class="user-side">
                     <div class="side-title">
                         👤 User Actions
                         <div class="status-indicator status-active"></div>
                     </div>
-                    
+
                     <div class="step user-step">
                         <div class="step-number">1</div>
                         <div class="step-title">📱 Open Travana App</div>
@@ -321,7 +325,8 @@
                     <div class="step user-step">
                         <div class="step-number">2</div>
                         <div class="step-title">📍 Share Fuzzy Location</div>
-                        <div class="step-detail">User allows location access, but only geohash zone is shared (~1.2km area)</div>
+                        <div class="step-detail">User allows location access, but only geohash zone is shared (~1.2km
+                            area)</div>
                         <div class="tech-detail">
                             <strong>Privacy:</strong> GPS → Geohash conversion (6-char = tdr5rw)
                         </div>
@@ -334,7 +339,8 @@
                     <div class="step user-step">
                         <div class="step-number">3</div>
                         <div class="step-title">🎯 Set Preferences</div>
-                        <div class="step-detail">Destination zone, ride type, max fare, vehicle preferences (EV, luxury, etc.)</div>
+                        <div class="step-detail">Destination zone, ride type, max fare, vehicle preferences (EV, luxury,
+                            etc.)</div>
                         <div class="tech-detail">
                             <strong>AI Input:</strong> Preferences stored with zone tags for learning
                         </div>
@@ -352,9 +358,10 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">1</div>
+                        <div class="step-number">4</div>
                         <div class="step-title">🗄️ Zone Indexing</div>
-                        <div class="step-detail">System indexes user into geohash cluster, no GPS coordinates stored</div>
+                        <div class="step-detail">System indexes user into geohash cluster, no GPS coordinates stored
+                        </div>
                         <div class="tech-detail">
                             <strong>Database:</strong> MongoDB with geospatial indexing on zones
                         </div>
@@ -365,11 +372,13 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">2</div>
+                        <div class="step-number">5</div>
                         <div class="step-title">🤖 AI Matching Engine</div>
-                        <div class="step-detail">ML algorithm finds compatible drivers using multi-factor optimization</div>
+                        <div class="step-detail">ML algorithm finds compatible drivers using multi-factor optimization
+                        </div>
                         <div class="tech-detail">
-                            <strong>Algorithm:</strong> Zone proximity + price match + preference overlap + historical success
+                            <strong>Algorithm:</strong> Zone proximity + price match + preference overlap + historical
+                            success
                         </div>
                         <div class="data-flow">
                             Matching Score = 0.4×zone_dist + 0.3×price_match + 0.2×preferences + 0.1×history
@@ -377,9 +386,10 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">3</div>
+                        <div class="step-number">6</div>
                         <div class="step-title">💰 Dynamic Pricing</div>
-                        <div class="step-detail">Fair pricing calculated using zone demand, distance estimation, and user willingness</div>
+                        <div class="step-detail">Fair pricing calculated using zone demand, distance estimation, and
+                            user willingness</div>
                         <div class="tech-detail">
                             <strong>ML Model:</strong> XGBoost regression on historical zone-pair pricing
                         </div>
@@ -391,16 +401,16 @@
         <!-- Phase 2: P2P Connection -->
         <div class="phase">
             <h2 class="phase-title">🔗 Phase 2: Secure P2P Connection & Exact Location</h2>
-            
+
             <div class="flow-diagram">
                 <div class="user-side">
                     <div class="side-title">
                         👥 Both Users
                         <div class="status-indicator status-secure"></div>
                     </div>
-                    
+
                     <div class="step user-step">
-                        <div class="step-number">4</div>
+                        <div class="step-number">7</div>
                         <div class="step-title">✅ Accept Match</div>
                         <div class="step-detail">Both rider and driver accept the AI-suggested match</div>
                         <div class="tech-detail">
@@ -409,9 +419,10 @@
                     </div>
 
                     <div class="step user-step">
-                        <div class="step-number">5</div>
+                        <div class="step-number">8</div>
                         <div class="step-title">🔐 P2P Handshake</div>
-                        <div class="step-detail">Direct WebRTC connection established between rider and driver devices</div>
+                        <div class="step-detail">Direct WebRTC connection established between rider and driver devices
+                        </div>
                         <div class="tech-detail">
                             <strong>Security:</strong> End-to-end encryption, no server intermediary
                         </div>
@@ -422,9 +433,10 @@
                     </div>
 
                     <div class="step user-step">
-                        <div class="step-number">6</div>
+                        <div class="step-number">9</div>
                         <div class="step-title">📍 Share Exact Location</div>
-                        <div class="step-detail">Now connected P2P, exact pickup/dropoff coordinates are shared privately</div>
+                        <div class="step-detail">Now connected P2P, exact pickup/dropoff coordinates are shared
+                            privately</div>
                         <div class="tech-detail">
                             <strong>Privacy Win:</strong> Travana servers never see exact locations
                         </div>
@@ -442,7 +454,7 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">4</div>
+                        <div class="step-number">10</div>
                         <div class="step-title">🔄 WebRTC Signaling</div>
                         <div class="step-detail">Server facilitates initial connection handshake only</div>
                         <div class="tech-detail">
@@ -454,20 +466,11 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">5</div>
+                        <div class="step-number">11</div>
                         <div class="step-title">📊 Minimal Logging</div>
                         <div class="step-detail">Only ride metadata logged: zone pair, timestamp, fare amount</div>
                         <div class="tech-detail">
                             <strong>Privacy:</strong> No routes, no exact locations, no conversation data
-                        </div>
-                    </div>
-
-                    <div class="step system-step">
-                        <div class="step-number">6</div>
-                        <div class="step-title">⏱️ Ride Monitoring</div>
-                        <div class="step-detail">Heartbeat signals ensure ride safety without location tracking</div>
-                        <div class="tech-detail">
-                            <strong>Safety:</strong> Periodic "alive" signals, emergency protocols
                         </div>
                     </div>
                 </div>
@@ -477,16 +480,16 @@
         <!-- Phase 3: Blockchain Settlement -->
         <div class="phase">
             <h2 class="phase-title">⛓️ Phase 3: Trustless Payment & Rewards</h2>
-            
+
             <div class="flow-diagram">
                 <div class="user-side">
                     <div class="side-title">
                         💳 Payment Flow
                         <div class="status-indicator status-active"></div>
                     </div>
-                    
+
                     <div class="step user-step">
-                        <div class="step-number">7</div>
+                        <div class="step-number">12</div>
                         <div class="step-title">🔒 Escrow Lock</div>
                         <div class="step-detail">Rider's payment automatically locked in Aptos smart contract</div>
                         <div class="tech-detail">
@@ -498,7 +501,7 @@
                     </div>
 
                     <div class="step user-step">
-                        <div class="step-number">8</div>
+                        <div class="step-number">13</div>
                         <div class="step-title">🚗 Complete Ride</div>
                         <div class="step-detail">Both parties confirm ride completion via app</div>
                         <div class="tech-detail">
@@ -507,9 +510,9 @@
                     </div>
 
                     <div class="step user-step">
-                        <div class="step-number">9</div>
+                        <div class="step-number">14</div>
                         <div class="step-title">🎁 Receive Rewards</div>
-                        <div class="step-detail">Earn $TVN tokens, loyalty points, and ride NFT receipt</div>
+                        <div class="step-detail">Earn $TVN loyalty points, and ride NFT receipt</div>
                         <div class="tech-detail">
                             <strong>Tokenomics:</strong> Base ride + bonuses (EV, referral, streak, etc.)
                         </div>
@@ -527,7 +530,7 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">7</div>
+                        <div class="step-number">15</div>
                         <div class="step-title">📜 Contract Execution</div>
                         <div class="step-detail">Automated escrow contract handles all payment logic</div>
                         <div class="tech-detail">
@@ -543,7 +546,7 @@
                     </div>
 
                     <div class="step system-step">
-                        <div class="step-number">8</div>
+                        <div class="step-number">16</div>
                         <div class="step-title">🎨 NFT Minting</div>
                         <div class="step-detail">Unique ride receipt NFT created with metadata</div>
                         <div class="tech-detail">
@@ -551,14 +554,14 @@
                         </div>
                     </div>
 
-                    <div class="step system-step">
+                    <!-- <div class="step system-step">
                         <div class="step-number">9</div>
                         <div class="step-title">📈 Learning Update</div>
                         <div class="step-detail">AI model learns from successful ride for future matching</div>
                         <div class="tech-detail">
                             <strong>ML:</strong> Feedback loop improves zone pricing and matching accuracy
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -610,8 +613,9 @@
             </div>
         </div>
 
-        <div style="background: rgba(50, 205, 50, 0.2); border-radius: 15px; padding: 30px; text-align: center; margin-top: 40px;">
-            <h2 style="color: #32CD32; margin-bottom: 20px;">✅ Complete Flow Result</h2>
+        <div
+            style="background: rgba(50, 205, 50, 0.2); border-radius: 15px; padding: 30px; text-align: center; margin-top: 40px;">
+            <h2 style="color: #32CD32; margin-bottom: 20px;">✅ Complete Flow in Short</h2>
             <p style="font-size: 1.1em; line-height: 1.6;">
                 <strong>Privacy Achieved:</strong> Zero location tracking by Travana<br>
                 <strong>Fair Pricing:</strong> AI-optimized, transparent fare calculation<br>
@@ -622,4 +626,5 @@
         </div>
     </div>
 </body>
+
 </html>
